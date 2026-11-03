@@ -1,0 +1,8 @@
+{
+  "name": "BRISA PREMIUM | Suscripciones Digitales & Streaming",
+  "description": "Sitio oficial de BRISA PREMIUM. Suscripciones digitales y cuentas premium para Netflix, Disney+, Max, ViX, Crunchyroll, Spotify y más, con soporte de Lunaria AI y atención por WhatsApp.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

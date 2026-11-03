@@ -1,0 +1,942 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BRISA PREMIUM | Suscripciones Digitales & Streaming</title>
+    <meta
+      name="description"
+      content="Sitio oficial de BRISA PREMIUM. Suscripciones digitales y cuentas premium para Netflix, Disney+, Max, ViX, Crunchyroll, Spotify y más, con soporte de Lunaria AI y atención por WhatsApp."
+    />
+    <meta property="og:title" content="BRISA PREMIUM | Suscripciones Digitales & Streaming" />
+    <meta
+      property="og:description"
+      content="Sitio oficial de BRISA PREMIUM. Suscripciones digitales y cuentas premium para Netflix, Disney+, Max, ViX, Crunchyroll, Spotify y más, con soporte de Lunaria AI y atención por WhatsApp."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='28' fill='%23fbf0f2' stroke='%23c97d86' stroke-width='4'/%3E%3Cpolygon points='40,30 75,50 40,70' fill='%23c97d86'/%3E%3C/svg%3E" />
+    <link rel="stylesheet" href="/src/index.css" />
+  </head>
+  <body>
+    <!-- Top Announcement Bar -->
+    <div style="background: linear-gradient(90deg, #fcecee 0%, #fad2e1 50%, #fcecee 100%); color: #703b44; font-size: 0.84rem; font-weight: 600; text-align: center; padding: 8px 16px; border-bottom: 1px solid #edd2d5; letter-spacing: 0.02em;">
+      <span>⚡ Entrega de cuenta de 5 minutos a 1 hora · Garantía oficial de 25 días · Soporte & pedidos por WhatsApp: <a href="https://wa.me/529831826892" target="_blank" rel="noopener noreferrer" style="color: #703b44; font-weight: 800; text-decoration: underline;">+52 983 182 6892</a></span>
+    </div>
+
+    <!-- Main Navigation Header -->
+    <header style="position: sticky; top: 0; z-index: 900; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(14px); border-bottom: 1px solid var(--color-rose-border); transition: all 0.3s ease;">
+      <div style="max-width: 1240px; margin: 0 auto; padding: 12px 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px;">
+        <!-- Brand Logo -->
+        <a href="#inicio" style="display: flex; flex-direction: column; text-decoration: none; color: inherit;">
+          <span style="font-family: var(--font-serif); font-size: 1.65rem; font-weight: 700; letter-spacing: 0.06em; color: var(--color-text-title); line-height: 1.1;">BRISA PREMIUM</span>
+          <span style="font-size: 0.72rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--color-rose-deep); font-weight: 700;">Suscripciones Digitales</span>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav id="desktopNav" style="display: flex; align-items: center; gap: 24px;">
+          <a href="#inicio" style="color: var(--color-text-title); text-decoration: none; font-weight: 600; font-size: 0.92rem; transition: color 0.2s;">Inicio</a>
+          <a href="#catalogo" style="color: var(--color-text-title); text-decoration: none; font-weight: 600; font-size: 0.92rem; transition: color 0.2s;">Catálogo</a>
+          <a href="#combos" style="color: var(--color-text-title); text-decoration: none; font-weight: 600; font-size: 0.92rem; transition: color 0.2s;">Combos</a>
+          <a href="#como-funciona" style="color: var(--color-text-title); text-decoration: none; font-weight: 600; font-size: 0.92rem; transition: color 0.2s;">Cómo Funciona</a>
+          <a href="#atencion" style="color: var(--color-text-title); text-decoration: none; font-weight: 600; font-size: 0.92rem; transition: color 0.2s;">Garantía & FAQs</a>
+        </nav>
+
+        <!-- Header Actions: User Session & Actions -->
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <!-- User Session Container (Populated by JS) -->
+          <div id="userHeaderSession">
+            <!-- Will render: Iniciar Sesión button or User profile pill with Admin panel trigger -->
+          </div>
+
+          <button id="openLunariaNavBtn" class="btn-lunaria" style="display: inline-flex; padding: 9px 18px;" title="Abrir asistente virtual Lunaria AI">
+            <span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background-color: #25d366; box-shadow: 0 0 6px #25d366;"></span>
+            <span>Lunaria AI</span>
+          </button>
+
+          <a href="https://wa.me/529831826892" target="_blank" rel="noopener noreferrer" class="btn-whatsapp" style="padding: 9px 18px;" title="Pedir por WhatsApp">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12.031 2C6.494 2 2 6.494 2 12.031c0 1.996.586 3.86 1.6 5.432L2 22l4.678-1.554c1.517.926 3.284 1.458 5.174 1.458 5.537 0 10.031-4.494 10.031-10.031S17.568 2 12.031 2zm5.789 14.286c-.244.686-1.218 1.258-1.706 1.319-.488.06-1.077.108-3.414-.827-2.731-1.092-4.484-3.844-4.62-4.025-.136-.182-1.1-1.465-1.1-2.793 0-1.328.694-1.982.94-2.247.245-.264.536-.33.714-.33.178 0 .356 0 .513.01.168.01.393-.064.615.47.227.548.777 1.897.844 2.035.068.137.113.3.023.48-.09.182-.136.296-.27.456-.137.161-.287.359-.41.482-.137.137-.28.286-.12.56.16.274.71 1.173 1.524 1.898 1.047.933 1.93 1.222 2.203 1.359.274.137.433.114.593-.069.16-.183.685-.798.868-1.072.183-.274.366-.228.616-.137.251.091 1.597.753 1.872.89.274.137.457.206.525.32.069.115.069.664-.175 1.35z"/>
+            </svg>
+            <span style="display: none; @media(min-width: 640px){ display: inline; }">WhatsApp</span>
+          </a>
+
+          <!-- Mobile Menu Button -->
+          <button id="mobileMenuBtn" aria-label="Abrir menú" style="display: none; background: transparent; border: none; font-size: 1.5rem; color: var(--color-text-title); cursor: pointer; padding: 6px;">
+            ☰
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Dropdown Menu -->
+      <div id="mobileMenu" style="display: none; background: #ffffff; border-top: 1px solid var(--color-rose-border); padding: 16px 24px; flex-direction: column; gap: 14px;">
+        <div id="mobileAuthRow" style="padding-bottom: 8px; border-bottom: 1px solid var(--color-rose-border);"></div>
+        <a href="#inicio" class="mobile-link" style="color: var(--color-text-title); text-decoration: none; font-weight: 600; font-size: 1rem; padding: 6px 0;">Inicio</a>
+        <a href="#catalogo" class="mobile-link" style="color: var(--color-text-title); text-decoration: none; font-weight: 600; font-size: 1rem; padding: 6px 0;">Catálogo de Streaming</a>
+        <a href="#combos" class="mobile-link" style="color: var(--color-text-title); text-decoration: none; font-weight: 600; font-size: 1rem; padding: 6px 0;">Combos & Promociones</a>
+        <a href="#como-funciona" class="mobile-link" style="color: var(--color-text-title); text-decoration: none; font-weight: 600; font-size: 1rem; padding: 6px 0;">Cómo Funciona</a>
+        <a href="#atencion" class="mobile-link" style="color: var(--color-text-title); text-decoration: none; font-weight: 600; font-size: 1rem; padding: 6px 0;">Garantía & FAQs</a>
+        <div style="padding-top: 10px; border-top: 1px solid var(--color-rose-border); display: flex; flex-direction: column; gap: 10px;">
+          <a href="https://wa.me/529831826892" target="_blank" rel="noopener noreferrer" class="btn-whatsapp" style="width: 100%; text-align: center;">
+            Pedir por WhatsApp (+52 9831826892)
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main id="root">
+      <!-- HERO SECTION -->
+      <section id="inicio" style="position: relative; overflow: hidden; padding: 60px 24px 80px; background: linear-gradient(180deg, #ffffff 0%, #fdf6f7 60%, #fbf0f2 100%);">
+        <div style="position: absolute; top: -100px; right: -100px; width: 450px; height: 450px; border-radius: 50%; background: radial-gradient(circle, rgba(250, 210, 225, 0.5) 0%, rgba(255, 255, 255, 0) 70%); pointer-events: none;"></div>
+        <div style="position: absolute; bottom: 0; left: -80px; width: 350px; height: 350px; border-radius: 50%; background: radial-gradient(circle, rgba(247, 237, 238, 0.7) 0%, rgba(255, 255, 255, 0) 70%); pointer-events: none;"></div>
+
+        <div style="max-width: 1240px; margin: 0 auto; position: relative; z-index: 2; display: grid; grid-template-columns: 1fr; gap: 48px; align-items: center;">
+          <!-- Left Column -->
+          <div style="display: flex; flex-direction: column; gap: 24px;">
+            <div style="display: inline-flex; align-items: center; gap: 8px; padding: 6px 16px; background-color: #ffffff; border: 1px solid var(--color-rose-border); border-radius: 9999px; width: fit-content; box-shadow: 0 2px 10px rgba(201, 125, 134, 0.12);">
+              <span style="color: var(--color-rose-primary);">✦</span>
+              <span style="font-size: 0.82rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: var(--color-rose-deep);">Tienda Digital Oficial</span>
+            </div>
+
+            <h1 style="font-size: clamp(2.3rem, 5vw, 3.7rem); line-height: 1.15; font-weight: 700; color: var(--color-text-title);">
+              Tus suscripciones digitales favoritas con <span style="font-style: italic; font-weight: 400; color: var(--color-rose-primary);">activación inmediata.</span>
+            </h1>
+
+            <p style="font-size: 1.12rem; line-height: 1.7; color: var(--color-text-body); max-width: 620px;">
+              En <strong>BRISA PREMIUM</strong> tienes acceso a <strong>Perfiles (1 Dispositivo) desde $30 MXN</strong> y <strong>Cuentas Completas para el Hogar</strong>. Calidad Ultra HD 4K, perfiles protegidos con PIN, sistema de clientes y 25 días de soporte garantizado.
+            </p>
+
+            <!-- Hero Action Buttons -->
+            <div style="display: flex; flex-wrap: wrap; gap: 14px; align-items: center; padding-top: 8px;">
+              <button id="heroGoProfilesBtn" class="btn-primary" style="font-size: 1rem; padding: 14px 28px;">
+                <span>Ver Perfiles ($30 - $88)</span>
+                <span>📱</span>
+              </button>
+              <button id="heroGoFullBtn" class="btn-secondary" style="font-size: 1rem; padding: 14px 24px;">
+                <span>Cuentas Completas</span>
+                <span>🏠</span>
+              </button>
+              <button id="heroLunariaTrigger" class="btn-lunaria" style="font-size: 1rem; padding: 14px 24px;">
+                <span>✨ Preguntar a Lunaria AI</span>
+              </button>
+            </div>
+
+            <!-- Value Highlights -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-top: 24px; padding-top: 24px; border-top: 1px solid var(--color-rose-border);">
+              <div style="display: flex; align-items: center; gap: 12px;">
+                <div style="width: 40px; height: 40px; border-radius: 50%; background-color: #ffffff; border: 1px solid var(--color-rose-border); display: flex; align-items: center; justify-content: center; color: var(--color-rose-primary); font-size: 1.15rem; flex-shrink: 0;">⚡</div>
+                <div>
+                  <div style="font-weight: 700; font-size: 0.9rem; color: var(--color-text-title);">Entrega de Cuenta</div>
+                  <div style="font-size: 0.78rem; color: var(--color-text-muted);">De 5 min a 1 hora</div>
+                </div>
+              </div>
+              <div style="display: flex; align-items: center; gap: 12px;">
+                <div style="width: 40px; height: 40px; border-radius: 50%; background-color: #ffffff; border: 1px solid var(--color-rose-border); display: flex; align-items: center; justify-content: center; color: var(--color-rose-primary); font-size: 1.15rem; flex-shrink: 0;">🛡️</div>
+                <div>
+                  <div style="font-weight: 700; font-size: 0.9rem; color: var(--color-text-title);">Garantía 25 Días</div>
+                  <div style="font-size: 0.78rem; color: var(--color-text-muted);">Soporte garantizado 25 días</div>
+                </div>
+              </div>
+              <div style="display: flex; align-items: center; gap: 12px;">
+                <div style="width: 40px; height: 40px; border-radius: 50%; background-color: #ffffff; border: 1px solid var(--color-rose-border); display: flex; align-items: center; justify-content: center; color: var(--color-rose-primary); font-size: 1.15rem; flex-shrink: 0;">🤖</div>
+                <div>
+                  <div style="font-weight: 700; font-size: 0.9rem; color: var(--color-text-title);">Lunaria AI 24/7</div>
+                  <div style="font-size: 0.78rem; color: var(--color-text-muted);">Asesoría y dudas al instante</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Interactive 3D Digital Streaming Hub Showcase -->
+          <div style="display: flex; flex-direction: column; gap: 12px;">
+            <div id="hero3DCanvasContainer">
+              <canvas id="heroCanvas" style="width: 100%; height: 100%; display: block; outline: none;"></canvas>
+              <div style="position: absolute; bottom: 16px; left: 18px; right: 18px; display: flex; justify-content: space-between; align-items: center; pointer-events: none;">
+                <div style="background: rgba(255, 255, 255, 0.88); backdrop-filter: blur(8px); padding: 6px 14px; border-radius: 9999px; font-size: 0.78rem; color: var(--color-rose-deep); border: 1px solid rgba(237, 210, 213, 0.7); box-shadow: 0 2px 8px rgba(0,0,0,0.04); font-weight: 600;">
+                  ✨ Toca o arrastra para rotar las tarjetas 3D
+                </div>
+                <div style="background: rgba(255, 255, 255, 0.88); backdrop-filter: blur(8px); padding: 6px 12px; border-radius: 9999px; font-size: 0.78rem; color: var(--color-rose-deep); border: 1px solid rgba(237, 210, 213, 0.7); font-weight: 700;">
+                  Brisa 3D
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- STREAMING PLATFORMS CATALOG (Section White) -->
+      <section id="catalogo" class="section-white" style="padding: 75px 24px;">
+        <div style="max-width: 1240px; margin: 0 auto; display: flex; flex-direction: column; gap: 36px;">
+          <!-- Section Header -->
+          <div style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 12px;">
+            <span style="font-size: 0.82rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.18em; color: var(--color-rose-primary);">Catálogo Digital Dinámico</span>
+            <h2 id="catalogMainTitle" style="font-size: clamp(2rem, 3.8vw, 2.8rem);">Catálogo de Perfiles (1 Dispositivo)</h2>
+            <p id="catalogSubtitle" style="font-size: 1.05rem; color: var(--color-text-muted); max-width: 700px;">
+              Precios exactos en pesos mexicanos ($ MXN). Perfiles privados con PIN exclusivo y cuentas completas para tu hogar.
+            </p>
+          </div>
+
+          <!-- PRIMARY MODE SWITCHER: Perfiles vs Cuentas Completas vs Combos -->
+          <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; padding-bottom: 6px;">
+            <button class="mode-tab active" id="tabProfilesBtn" data-mode="profiles">
+              <span>📱 Perfiles (1 Dispositivo)</span>
+            </button>
+            <button class="mode-tab" id="tabFullAccountsBtn" data-mode="full">
+              <span>🏠 Cuentas Completas (Hogar)</span>
+            </button>
+            <button class="mode-tab" id="tabCombosBtn" data-mode="combos">
+              <span>🎁 Combos & Promociones</span>
+            </button>
+          </div>
+
+          <!-- Notice for Full Accounts (Netflix private profile explanation) -->
+          <div id="fullAccountsNotice" style="display: none; background: #fff8f8; border: 1px solid #f9c2c8; border-radius: 16px; padding: 14px 20px; font-size: 0.92rem; color: #882b37; text-align: center;">
+            ℹ️ <strong>Información importante:</strong> En <em>Netflix</em> se maneja exclusivamente en modalidad <strong>privada de un perfil</strong> ($88 MXN con PIN propio), garantizando total privacidad a un precio accesible. <em>Universal+</em> tampoco aparece en cuentas completas por tener precio pendiente.
+          </div>
+
+          <!-- Category Filter Tabs -->
+          <div id="categoryFilterContainer" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-bottom: 6px;">
+            <button class="filter-pill active" data-category="all">Todas</button>
+            <button class="filter-pill" data-category="peliculas_series">Películas & Series</button>
+            <button class="filter-pill" data-category="deportes">Fútbol & Deportes</button>
+            <button class="filter-pill" data-category="anime">Anime & Manga</button>
+            <button class="filter-pill" data-category="musica">Música & Audio</button>
+          </div>
+
+          <!-- Platforms Grid (Dynamically Populated from Database) -->
+          <div id="productsGrid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 28px;">
+            <!-- Rendered by JavaScript -->
+          </div>
+        </div>
+      </section>
+
+      <!-- PROMOTIONS & COMBOS SECTION (Section Pale Rose) -->
+      <section id="combos" class="section-pale-rose" style="padding: 80px 24px;">
+        <div style="max-width: 1240px; margin: 0 auto; display: flex; flex-direction: column; gap: 40px;">
+          <div style="text-align: center;">
+            <span style="font-size: 0.82rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.18em; color: var(--color-rose-primary);">Promociones Especiales</span>
+            <h2 style="font-size: clamp(2rem, 3.8vw, 2.8rem); margin-top: 8px;">Combos de Streaming con Descuento</h2>
+            <p style="font-size: 1.05rem; color: var(--color-text-muted); max-width: 680px; margin: 12px auto 0;">
+              Combina tus plataformas preferidas y ahorra todos los meses. Configurables directamente desde el panel de administración.
+            </p>
+          </div>
+
+          <!-- Combos Grid (Dynamically Populated) -->
+          <div id="combosGrid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 26px;">
+            <!-- Rendered by JavaScript -->
+          </div>
+        </div>
+      </section>
+
+      <!-- HOW IT WORKS SECTION (Simple 3 steps) -->
+      <section id="como-funciona" class="section-white" style="padding: 75px 24px;">
+        <div style="max-width: 1100px; margin: 0 auto; text-align: center; display: flex; flex-direction: column; gap: 40px;">
+          <div>
+            <span style="font-size: 0.82rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.18em; color: var(--color-rose-primary);">Fácil, Rápido y Seguro</span>
+            <h2 style="font-size: clamp(2rem, 3.5vw, 2.7rem); margin-top: 8px;">¿Cómo funciona tu suscripción?</h2>
+            <div style="width: 60px; height: 3px; background: var(--color-rose-primary); margin: 16px auto 0; border-radius: 2px;"></div>
+          </div>
+
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 26px; text-align: left;">
+            <div style="background: var(--color-rose-subtle); padding: 30px; border-radius: 22px; border: 1px solid var(--color-rose-border); box-shadow: 0 4px 16px rgba(201, 125, 134, 0.08);">
+              <div style="font-size: 2rem; margin-bottom: 14px;">1️⃣</div>
+              <h3 style="font-size: 1.25rem; margin-bottom: 8px; color: var(--color-text-title);">Elige tu Modalidad</h3>
+              <p style="font-size: 0.94rem; color: var(--color-text-body); line-height: 1.65;">
+                Selecciona entre <strong>Perfil (1 Dispositivo)</strong> o <strong>Cuenta Completa</strong>. Si tienes dudas, pregúntale a Lunaria AI.
+              </p>
+            </div>
+            <div style="background: var(--color-rose-subtle); padding: 30px; border-radius: 22px; border: 1px solid var(--color-rose-border); box-shadow: 0 4px 16px rgba(201, 125, 134, 0.08);">
+              <div style="font-size: 2rem; margin-bottom: 14px;">2️⃣</div>
+              <h3 style="font-size: 1.25rem; margin-bottom: 8px; color: var(--color-text-title);">Paga por SPEI u OXXO</h3>
+              <p style="font-size: 0.94rem; color: var(--color-text-body); line-height: 1.65;">
+                Haz clic en el botón de WhatsApp (+52 9831826892) y te proporcionamos la cuenta clabe o ficha OXXO para transferir con total seguridad.
+              </p>
+            </div>
+            <div style="background: var(--color-rose-subtle); padding: 30px; border-radius: 22px; border: 1px solid var(--color-rose-border); box-shadow: 0 4px 16px rgba(201, 125, 134, 0.08);">
+              <div style="font-size: 2rem; margin-bottom: 14px;">3️⃣</div>
+              <h3 style="font-size: 1.25rem; margin-bottom: 8px; color: var(--color-text-title);">Recibe tus Accesos</h3>
+              <p style="font-size: 0.94rem; color: var(--color-text-body); line-height: 1.65;">
+                La entrega de tu cuenta puede durar de 5 minutos a una hora. Recibes tu usuario, contraseña y PIN de perfil para disfrutar con garantía oficial de 25 días.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- LUNARIA AI ASSISTANT SHOWCASE BANNER -->
+      <section style="padding: 60px 24px; background: #ffffff;">
+        <div style="max-width: 1140px; margin: 0 auto; background: linear-gradient(135deg, #fdf6f7 0%, #fae6ea 50%, #fdeff2 100%); border-radius: 28px; border: 1px solid var(--color-rose-border); padding: 48px 36px; display: grid; grid-template-columns: 1fr; gap: 32px; align-items: center; box-shadow: 0 12px 36px rgba(201, 125, 134, 0.12);">
+          <div style="display: flex; flex-direction: column; gap: 20px;">
+            <div style="display: inline-flex; align-items: center; gap: 8px; padding: 6px 14px; background: #ffffff; border-radius: 9999px; width: fit-content; border: 1px solid var(--color-rose-border); font-size: 0.82rem; font-weight: 700; color: var(--color-rose-deep);">
+              <span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background-color: #25d366;"></span>
+              <span>Inteligencia Artificial Gemini Conectada a la Base de Datos</span>
+            </div>
+            <h2 style="font-size: clamp(1.8rem, 3.2vw, 2.5rem); color: var(--color-text-title);">Conoce a <span style="color: var(--color-rose-deep);">Lunaria AI</span>, tu consejera de streaming</h2>
+            <p style="font-size: 1.05rem; line-height: 1.7; color: var(--color-text-body);">
+              «¡Hola! Soy Lunaria AI. ¿Qué plataforma estás buscando hoy?» Pregúntale precios de perfiles (Netflix $88, Disney+ $40, HBO Max $37, ViX $30, etc.), cuentas completas, promociones vigentes o resuelve dudas sobre la garantía de 25 días y entrega de 5 min a 1 hora.
+            </p>
+            <div style="display: flex; flex-wrap: wrap; gap: 14px;">
+              <button id="bannerOpenLunariaBtn" class="btn-primary" style="font-size: 1rem; padding: 14px 28px;">
+                <span>Chatear con Lunaria AI Ahora</span>
+                <span>✨</span>
+              </button>
+              <a href="https://wa.me/529831826892?text=Hola%20Brisa%20Premium,%20deseo%20contratar%20una%20suscripcion" target="_blank" rel="noopener noreferrer" class="btn-whatsapp" style="font-size: 1rem; padding: 14px 24px;">
+                <span>Atención Directa por WhatsApp</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CUSTOMER CARE, GUARANTEE & FAQS SECTION -->
+      <section id="atencion" class="section-pale-rose" style="padding: 80px 24px;">
+        <div style="max-width: 1100px; margin: 0 auto; display: flex; flex-direction: column; gap: 48px;">
+          <div style="text-align: center;">
+            <span style="font-size: 0.82rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.18em; color: var(--color-rose-primary);">Garantía & Soporte</span>
+            <h2 style="font-size: clamp(2rem, 3.8vw, 2.8rem); margin-top: 8px;">Preguntas Frecuentes</h2>
+            <p style="font-size: 1.05rem; color: var(--color-text-muted); max-width: 600px; margin: 12px auto 0;">
+              Todo sobre tiempos de entrega (de 5 minutos a 1 hora), compatibilidad, formas de pago y nuestra garantía oficial de 25 días.
+            </p>
+          </div>
+
+          <!-- FAQ Accordion -->
+          <div id="faqContainer" style="display: flex; flex-direction: column; gap: 14px;">
+            <!-- Populated by JavaScript -->
+          </div>
+
+          <!-- Direct WhatsApp Contact Box -->
+          <div style="background: #ffffff; border-radius: 24px; padding: 36px; border: 1px solid var(--color-rose-border); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 24px; box-shadow: 0 8px 24px rgba(201, 125, 134, 0.08);">
+            <div>
+              <h3 style="font-size: 1.45rem; margin-bottom: 8px; color: var(--color-text-title);">¿Listo para disfrutar de tus series y películas?</h3>
+              <p style="font-size: 0.98rem; color: var(--color-text-muted); max-width: 550px;">
+                Escríbenos a nuestro WhatsApp oficial: <strong>+52 983 182 6892</strong>. Entrega en 5 minutos a 1 hora y garantía de 25 días.
+              </p>
+            </div>
+            <a href="https://wa.me/529831826892?text=Hola%20Brisa%20Premium,%20deseo%20hacer%20un%20pedido" target="_blank" rel="noopener noreferrer" class="btn-whatsapp" style="font-size: 1.05rem; padding: 14px 28px;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 2C6.494 2 2 6.494 2 12.031c0 1.996.586 3.86 1.6 5.432L2 22l4.678-1.554c1.517.926 3.284 1.458 5.174 1.458 5.537 0 10.031-4.494 10.031-10.031S17.568 2 12.031 2zm5.789 14.286c-.244.686-1.218 1.258-1.706 1.319-.488.06-1.077.108-3.414-.827-2.731-1.092-4.484-3.844-4.62-4.025-.136-.182-1.1-1.465-1.1-2.793 0-1.328.694-1.982.94-2.247.245-.264.536-.33.714-.33.178 0 .356 0 .513.01.168.01.393-.064.615.47.227.548.777 1.897.844 2.035.068.137.113.3.023.48-.09.182-.136.296-.27.456-.137.161-.287.359-.41.482-.137.137-.28.286-.12.56.16.274.71 1.173 1.524 1.898 1.047.933 1.93 1.222 2.203 1.359.274.137.433.114.593-.069.16-.183.685-.798.868-1.072.183-.274.366-.228.616-.137.251.091 1.597.753 1.872.89.274.137.457.206.525.32.069.115.069.664-.175 1.35z"/></svg>
+              <span>Pedir por WhatsApp (+52 9831826892)</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer style="background-color: #231618; color: #eedbdc; padding: 60px 24px 30px; font-size: 0.92rem;">
+      <div style="max-width: 1240px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 40px; margin-bottom: 40px;">
+        <div style="display: flex; flex-direction: column; gap: 14px;">
+          <div style="font-family: var(--font-serif); font-size: 1.5rem; font-weight: 700; color: #ffffff; letter-spacing: 0.08em;">BRISA PREMIUM</div>
+          <div style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.16em; color: var(--color-pastel-pink); font-weight: 700;">Suscripciones Digitales & Streaming</div>
+          <p style="color: #c9b0b3; line-height: 1.6; margin-top: 6px;">
+            Tu entretenimiento favorito al mejor precio, con entrega de 5 minutos a 1 hora, perfiles con PIN y soporte con garantía oficial de 25 días.
+          </p>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 12px;">
+          <div style="font-weight: 700; color: #ffffff; font-size: 1.05rem; margin-bottom: 4px;">Navegación</div>
+          <a href="#inicio" style="color: #c9b0b3; text-decoration: none; transition: color 0.2s;">Inicio</a>
+          <a href="#catalogo" style="color: #c9b0b3; text-decoration: none; transition: color 0.2s;">Perfiles & Cuentas</a>
+          <a href="#combos" style="color: #c9b0b3; text-decoration: none; transition: color 0.2s;">Combos & Promociones</a>
+          <a href="#como-funciona" style="color: #c9b0b3; text-decoration: none; transition: color 0.2s;">Cómo Funciona</a>
+          <a href="#atencion" style="color: #c9b0b3; text-decoration: none; transition: color 0.2s;">Garantía & FAQs</a>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 12px;">
+          <div style="font-weight: 700; color: #ffffff; font-size: 1.05rem; margin-bottom: 4px;">Atención Directa</div>
+          <div>📱 <strong>WhatsApp Oficial:</strong> <a href="https://wa.me/529831826892" target="_blank" rel="noopener noreferrer" style="color: #fad2e1; text-decoration: underline;">+52 983 182 6892</a></div>
+          <div>✉️ <strong>Correo:</strong> soporte@brisapremium.com</div>
+          <div>🕒 <strong>Horario:</strong> Lun - Dom: 9:00 AM - 10:00 PM</div>
+          <div>⚡ <strong>Entrega:</strong> De 5 minutos a 1 hora</div>
+          <div>🛡️ <strong>Garantía:</strong> 25 días oficiales</div>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 12px;">
+          <div style="font-weight: 700; color: #ffffff; font-size: 1.05rem; margin-bottom: 4px;">Asistente Virtual</div>
+          <p style="color: #c9b0b3; line-height: 1.5;">
+            Lunaria AI está activa las 24 horas para resolver tus dudas sobre cuentas, precios y combos.
+          </p>
+          <button id="footerLunariaBtn" class="btn-lunaria" style="width: fit-content; margin-top: 6px;">
+            Consultar a Lunaria AI
+          </button>
+        </div>
+      </div>
+
+      <div style="max-width: 1240px; margin: 0 auto; padding-top: 24px; border-top: 1px solid rgba(255, 255, 255, 0.1); display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px; font-size: 0.82rem; color: #a48c90;">
+        <div>© 2026 BRISA PREMIUM. Todos los derechos reservados. Tienda digital independiente.</div>
+        <div>Diseño elegante en rosa palo y blanco · Asistente Lunaria AI</div>
+      </div>
+    </footer>
+
+    <!-- FLOATING ACTIONS: WhatsApp & Lunaria AI Launcher -->
+    <div class="floating-actions-container">
+      <a
+        href="https://wa.me/529831826892?text=Hola%20Brisa%20Premium,%20deseo%20contratar%20una%20cuenta"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="floating-btn floating-whatsapp pulse-effect"
+        id="floatingWhatsappBtn"
+        title="Escríbenos directamente por WhatsApp: +52 9831826892"
+        aria-label="Abrir WhatsApp oficial"
+      >
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12.031 2C6.494 2 2 6.494 2 12.031c0 1.996.586 3.86 1.6 5.432L2 22l4.678-1.554c1.517.926 3.284 1.458 5.174 1.458 5.537 0 10.031-4.494 10.031-10.031S17.568 2 12.031 2zm5.789 14.286c-.244.686-1.218 1.258-1.706 1.319-.488.06-1.077.108-3.414-.827-2.731-1.092-4.484-3.844-4.62-4.025-.136-.182-1.1-1.465-1.1-2.793 0-1.328.694-1.982.94-2.247.245-.264.536-.33.714-.33.178 0 .356 0 .513.01.168.01.393-.064.615.47.227.548.777 1.897.844 2.035.068.137.113.3.023.48-.09.182-.136.296-.27.456-.137.161-.287.359-.41.482-.137.137-.28.286-.12.56.16.274.71 1.173 1.524 1.898 1.047.933 1.93 1.222 2.203 1.359.274.137.433.114.593-.069.16-.183.685-.798.868-1.072.183-.274.366-.228.616-.137.251.091 1.597.753 1.872.89.274.137.457.206.525.32.069.115.069.664-.175 1.35z"/>
+        </svg>
+      </a>
+
+      <button
+        class="floating-btn floating-lunaria"
+        id="floatingLunariaBtn"
+        title="Abrir asistente virtual Lunaria AI"
+        aria-label="Abrir asistente Lunaria AI"
+      >
+        <span class="floating-badge">IA</span>
+        <span style="font-size: 26px;">✨</span>
+      </button>
+    </div>
+
+    <!-- LUNARIA AI CHAT DRAWER / MODAL -->
+    <div id="lunariaChatDrawer" class="chat-drawer" role="dialog" aria-modal="true" aria-labelledby="chatHeaderTitle">
+      <div class="chat-header">
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <div style="width: 44px; height: 44px; border-radius: 50%; background: linear-gradient(135deg, #c97d86 0%, #fad2e1 100%); display: flex; align-items: center; justify-content: center; font-size: 22px; border: 2px solid #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+            🌸
+          </div>
+          <div>
+            <div id="chatHeaderTitle" style="font-family: var(--font-serif); font-size: 1.15rem; font-weight: 700; color: var(--color-text-title); line-height: 1.2;">
+              Lunaria AI
+            </div>
+            <div style="font-size: 0.78rem; color: #258c43; font-weight: 700; display: flex; align-items: center; gap: 5px;">
+              <span style="width: 7px; height: 7px; border-radius: 50%; background-color: #25d366; display: inline-block;"></span>
+              Asesora Brisa Premium · En línea
+            </div>
+          </div>
+        </div>
+        <button id="closeChatBtn" style="background: transparent; border: none; font-size: 1.4rem; color: var(--color-text-muted); cursor: pointer; padding: 4px 8px; border-radius: 8px;">
+          ✕
+        </button>
+      </div>
+
+      <div id="chatMessages" class="chat-messages">
+        <div class="chat-bubble bubble-bot">
+          «¡Hola! Soy <strong>Lunaria AI</strong>. ¿Qué plataforma estás buscando hoy?» 🌸
+          <br><br>
+          Puedo ayudarte con precios de <strong>Perfiles (1 Dispositivo)</strong> o <strong>Cuentas Completas para el hogar</strong>, promociones vigentes, resolver dudas sobre la <strong>garantía de 25 días</strong> y la <strong>entrega de 5 minutos a 1 hora</strong>, o asesorarte para pedir por WhatsApp (+52 9831826892).
+        </div>
+
+        <div id="chatQuickChips" style="display: flex; flex-direction: column; gap: 8px; margin: 4px 0;">
+          <span style="font-size: 0.76rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--color-rose-deep);">Preguntas frecuentes:</span>
+          <button class="chip" data-question="¿La cuenta puede fallar y qué pasa si falla?">
+            ⚠️ ¿La cuenta puede fallar y cómo es la reposición de 1 a 3 días?
+          </button>
+          <button class="chip" data-question="¿Por qué Netflix no está en cuenta completa?">
+            🎬 ¿Por qué Netflix no está en cuenta completa?
+          </button>
+          <button class="chip" data-question="¿Qué precio tiene Netflix en perfil y qué incluye?">
+            ✨ Precios de Netflix ($88) y Disney+ ($40)
+          </button>
+          <button class="chip" data-question="¿Cuál es la garantía de las cuentas y cuánto dura la entrega?">
+            🛡️ ¿Garantía (25 días) y tiempo de entrega (5 min a 1 h)?
+          </button>
+          <button class="chip" data-question="¿Cuáles son las promociones o combos vigentes?">
+            🎁 ¿Cuáles son las promociones o combos vigentes?
+          </button>
+          <button class="chip" data-question="Quiero pedir por WhatsApp (+52 9831826892)">
+            📱 Quiero pedir por WhatsApp (+52 9831826892)
+          </button>
+        </div>
+      </div>
+
+      <form id="chatForm" class="chat-input-bar">
+        <input
+          type="text"
+          id="chatInput"
+          class="chat-input"
+          placeholder="Escribe tu pregunta a Lunaria AI..."
+          autocomplete="off"
+          required
+        />
+        <button type="submit" class="chat-send-btn" title="Enviar mensaje" aria-label="Enviar">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="22" y1="2" x2="11" y2="13"></line>
+            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+          </svg>
+        </button>
+      </form>
+    </div>
+
+    <!-- AUTHENTICATION MODAL (LOGIN / REGISTER / FORGOT PASSWORD) -->
+    <div id="authModal" class="modal-backdrop">
+      <div class="modal-card" style="width: 480px; max-width: 95vw; padding: 32px;">
+        <button id="closeAuthModalBtn" style="position: absolute; top: 18px; right: 20px; background: transparent; border: none; font-size: 1.5rem; color: var(--color-text-muted); cursor: pointer;">✕</button>
+
+        <div style="text-align: center; margin-bottom: 24px;">
+          <div style="font-family: var(--font-serif); font-size: 1.6rem; font-weight: 700; color: var(--color-text-title);">BRISA PREMIUM</div>
+          <div id="authModalHeaderSubtitle" style="font-size: 0.88rem; color: var(--color-rose-deep); font-weight: 600;">Bienvenida a tu portal de streaming</div>
+        </div>
+
+        <!-- Auth Tabs: Login vs Register vs Forgot -->
+        <div style="display: flex; border-bottom: 2px solid var(--color-rose-border); margin-bottom: 22px;">
+          <button id="authTabLoginBtn" style="flex: 1; padding: 10px; background: transparent; border: none; font-weight: 700; color: var(--color-rose-deep); border-bottom: 2px solid var(--color-rose-primary); margin-bottom: -2px; cursor: pointer;">
+            Iniciar Sesión
+          </button>
+          <button id="authTabRegisterBtn" style="flex: 1; padding: 10px; background: transparent; border: none; font-weight: 600; color: var(--color-text-muted); cursor: pointer;">
+            Registrarse
+          </button>
+          <button id="authTabForgotBtn" style="flex: 1; padding: 10px; background: transparent; border: none; font-weight: 600; color: var(--color-text-muted); cursor: pointer;">
+            Recuperar
+          </button>
+        </div>
+
+        <!-- Feedback Alert Container -->
+        <div id="authAlert" style="display: none; padding: 12px 16px; border-radius: 12px; font-size: 0.88rem; margin-bottom: 16px; line-height: 1.5;"></div>
+
+        <!-- LOGIN FORM -->
+        <form id="loginForm">
+          <div class="form-group">
+            <label class="form-label">Usuario o Correo Electrónico</label>
+            <input type="text" id="loginIdentifier" class="form-input" placeholder="ej. mariana o admin" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Contraseña</label>
+            <input type="password" id="loginPassword" class="form-input" placeholder="••••••••" required />
+          </div>
+          <div style="font-size: 0.8rem; color: var(--color-text-muted); margin-bottom: 18px; background: var(--color-rose-subtle); padding: 8px 12px; border-radius: 8px; border: 1px dashed var(--color-rose-border);">
+            👑 <strong>Dueña / Administradora:</strong> Usuario: <code>admin</code> | Clave: <code>AdminBrisa2026!</code>
+          </div>
+          <button type="submit" class="btn-primary" style="width: 100%; padding: 13px;">
+            Ingresar a Brisa Premium
+          </button>
+        </form>
+
+        <!-- REGISTER FORM -->
+        <form id="registerForm" style="display: none;">
+          <div class="form-group">
+            <label class="form-label">Nombre de Usuario</label>
+            <input type="text" id="regUsername" class="form-input" placeholder="ej. laura.gomez" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Correo Electrónico</label>
+            <input type="email" id="regEmail" class="form-input" placeholder="tu@correo.com" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Número de WhatsApp</label>
+            <input type="tel" id="regPhone" class="form-input" placeholder="+52 983 123 4567" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Contraseña</label>
+            <input type="password" id="regPassword" class="form-input" placeholder="Mínimo 6 caracteres" required />
+          </div>
+          <div style="font-size: 0.82rem; color: #882b37; background: #fff8f8; border: 1px solid #f9c2c8; border-radius: 10px; padding: 10px 14px; margin-bottom: 18px;">
+            ⚠️ <strong>Importante:</strong> Tu registro estará sujeto a la autorización de la administradora de Brisa Premium para proteger la seguridad del servicio.
+          </div>
+          <button type="submit" class="btn-primary" style="width: 100%; padding: 13px;">
+            Solicitar Registro
+          </button>
+        </form>
+
+        <!-- FORGOT PASSWORD FORM -->
+        <form id="forgotForm" style="display: none;">
+          <div class="form-group">
+            <label class="form-label">Tu Usuario o Correo Electrónico</label>
+            <input type="text" id="forgotIdentifier" class="form-input" placeholder="ej. tu@correo.com" required />
+          </div>
+          <div style="font-size: 0.84rem; color: var(--color-text-muted); margin-bottom: 16px;">
+            Te proporcionaremos un código PIN temporal para que puedas asignar tu nueva contraseña o solicitar ayuda directa a WhatsApp: +52 9831826892.
+          </div>
+          <button type="button" id="btnRequestPin" class="btn-secondary" style="width: 100%; margin-bottom: 16px; padding: 11px;">
+            Generar Código PIN de Recuperación
+          </button>
+
+          <div id="resetFieldsContainer" style="display: none; padding-top: 14px; border-top: 1px solid var(--color-rose-border);">
+            <div class="form-group">
+              <label class="form-label">Código PIN Recibido</label>
+              <input type="text" id="resetPin" class="form-input" placeholder="6 dígitos" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Nueva Contraseña</label>
+              <input type="password" id="resetNewPassword" class="form-input" placeholder="Nueva contraseña" />
+            </div>
+            <button type="submit" class="btn-primary" style="width: 100%; padding: 12px;">
+              Guardar Nueva Contraseña
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- ADMIN PRIVATE DASHBOARD MODAL (EXCLUSIVE FOR ADMIN) -->
+    <div id="adminModal" class="modal-backdrop">
+      <div class="modal-card" style="width: 1020px; max-width: 96vw; padding: 32px;">
+        <button id="closeAdminModalBtn" style="position: absolute; top: 20px; right: 24px; background: transparent; border: none; font-size: 1.6rem; color: var(--color-text-muted); cursor: pointer;">✕</button>
+
+        <div style="display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 24px; border-bottom: 1px solid var(--color-rose-border); padding-bottom: 16px;">
+          <div>
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <span style="font-size: 1.4rem;">👑</span>
+              <h2 style="font-size: 1.55rem; color: var(--color-text-title); margin: 0;">Panel Privado de Administración</h2>
+            </div>
+            <div style="font-size: 0.88rem; color: var(--color-rose-deep);">BRISA PREMIUM · Gestión de clientes, catálogo en vivo y pedidos</div>
+          </div>
+          <div style="background: var(--color-rose-subtle); border: 1px solid var(--color-rose-border); padding: 6px 14px; border-radius: 9999px; font-size: 0.8rem; font-weight: 700; color: var(--color-text-title);">
+            Autenticado como Administradora
+          </div>
+        </div>
+
+        <!-- Admin Sub-Navigation Tabs -->
+        <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 24px;">
+          <button class="filter-pill active" id="adminTabClientAccountsBtn">💳 Cuentas & Pagos de Clientes</button>
+          <button class="filter-pill" id="adminTabUsersBtn">👥 Usuarios & Accesos</button>
+          <button class="filter-pill" id="adminTabCatalogBtn">📺 Catálogo & Precios</button>
+          <button class="filter-pill" id="adminTabCombosBtn">🎁 Promociones & Combos</button>
+          <button class="filter-pill" id="adminTabOrdersBtn">📋 Pedidos Registrados</button>
+        </div>
+
+        <!-- Admin Feedback Alert -->
+        <div id="adminAlert" style="display: none; padding: 12px 18px; border-radius: 12px; font-size: 0.9rem; margin-bottom: 20px;"></div>
+
+        <!-- VIEW 0: CLIENT ACCOUNTS & PAYMENTS MANAGEMENT -->
+        <div id="adminViewClientAccounts">
+          <!-- Financial / Accounts KPI Summary Cards -->
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; margin-bottom: 20px;">
+            <div style="background: var(--color-rose-subtle); border: 1px solid var(--color-rose-border); border-radius: 14px; padding: 14px 18px;">
+              <div style="font-size: 0.78rem; font-weight: 700; text-transform: uppercase; color: var(--color-rose-deep);">Total Cuentas Asignadas</div>
+              <div id="adminStatTotalAccounts" style="font-size: 1.8rem; font-weight: 800; color: var(--color-text-title); margin-top: 4px;">0</div>
+            </div>
+            <div style="background: #ecfdf5; border: 1px solid #a7f3d0; border-radius: 14px; padding: 14px 18px;">
+              <div style="font-size: 0.78rem; font-weight: 700; text-transform: uppercase; color: #065f46;">Pagos Al Día</div>
+              <div id="adminStatAlDia" style="font-size: 1.8rem; font-weight: 800; color: #047857; margin-top: 4px;">0</div>
+            </div>
+            <div style="background: #fffbeb; border: 1px solid #fde68a; border-radius: 14px; padding: 14px 18px;">
+              <div style="font-size: 0.78rem; font-weight: 700; text-transform: uppercase; color: #92400e;">Próximos a Vencer</div>
+              <div id="adminStatPorVencer" style="font-size: 1.8rem; font-weight: 800; color: #b45309; margin-top: 4px;">0</div>
+            </div>
+            <div style="background: #fef2f2; border: 1px solid #fecaca; border-radius: 14px; padding: 14px 18px;">
+              <div style="font-size: 0.78rem; font-weight: 700; text-transform: uppercase; color: #991b1b;">Vencidos / Pendientes</div>
+              <div id="adminStatVencidos" style="font-size: 1.8rem; font-weight: 800; color: #b91c1c; margin-top: 4px;">0</div>
+            </div>
+          </div>
+
+          <!-- Controls Bar: Search & Filter & New Account Button -->
+          <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 16px;">
+            <div style="display: flex; flex-wrap: wrap; gap: 10px; align-items: center; flex: 1;">
+              <input type="text" id="adminAccountSearchInput" placeholder="🔍 Buscar por cliente, correo de cuenta o plataforma..." style="padding: 9px 14px; border-radius: 10px; border: 1px solid var(--color-rose-border); font-size: 0.88rem; width: 100%; max-width: 380px;" />
+              <select id="adminAccountStatusFilter" style="padding: 9px 14px; border-radius: 10px; border: 1px solid var(--color-rose-border); font-size: 0.86rem; background: #ffffff; cursor: pointer;">
+                <option value="all">Todos los estados</option>
+                <option value="al_dia">🟢 Al día</option>
+                <option value="por_vencer">🟡 Por vencer (próximo pago)</option>
+                <option value="vencido">🔴 Vencido</option>
+                <option value="pendiente">🟠 Pendiente</option>
+              </select>
+            </div>
+            <button id="adminCreateAccountBtn" class="btn-primary" style="font-size: 0.88rem; padding: 10px 20px; background: linear-gradient(135deg, #059669 0%, #10b981 100%);">
+              + Asignar Nueva Cuenta a Cliente
+            </button>
+          </div>
+
+          <!-- Accounts Table -->
+          <div style="overflow-x: auto; border: 1px solid var(--color-rose-border); border-radius: 16px; background: #ffffff;">
+            <table class="admin-table">
+              <thead>
+                <tr>
+                  <th>Cliente & Contacto</th>
+                  <th>Servicio / Cuenta</th>
+                  <th>Correo Asignado</th>
+                  <th>Clave / PIN</th>
+                  <th>Fecha Renovación</th>
+                  <th>Monto</th>
+                  <th>Estado Pago</th>
+                  <th>Acciones</th>
+                </tr>
+              </thead>
+              <tbody id="adminClientAccountsTableBody">
+                <!-- Filled dynamically by JS -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- VIEW 1: CLIENTS MANAGEMENT -->
+        <div id="adminViewUsers" style="display: none;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px;">
+            <div style="font-weight: 700; font-size: 1.1rem; color: var(--color-text-title);">Clientes y Autorizaciones</div>
+            <button id="adminCreateUserBtn" class="btn-secondary" style="font-size: 0.85rem; padding: 8px 16px;">+ Nuevo Cliente</button>
+          </div>
+          <div style="overflow-x: auto; border: 1px solid var(--color-rose-border); border-radius: 16px;">
+            <table class="admin-table">
+              <thead>
+                <tr>
+                  <th>Usuario</th>
+                  <th>Correo</th>
+                  <th>WhatsApp</th>
+                  <th>Rol</th>
+                  <th>Estado</th>
+                  <th>Acciones</th>
+                </tr>
+              </thead>
+              <tbody id="adminUsersTableBody">
+                <!-- Filled by JS -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- VIEW 2: LIVE CATALOG & PRICES MANAGEMENT -->
+        <div id="adminViewCatalog" style="display: none;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px;">
+            <div>
+              <div style="font-weight: 700; font-size: 1.1rem; color: var(--color-text-title);">Precios y Plataformas en Tiempo Real</div>
+              <div style="font-size: 0.84rem; color: var(--color-text-muted);">Los cambios se guardan en la base de datos y Lunaria AI los utiliza de inmediato sin reconstruir la página.</div>
+            </div>
+            <button id="adminAddPlatformBtn" class="btn-secondary" style="font-size: 0.85rem; padding: 8px 16px;">+ Agregar Plataforma</button>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr; gap: 24px;">
+            <div>
+              <h3 style="font-size: 1.1rem; color: var(--color-rose-deep); margin-bottom: 10px;">📱 Perfiles (1 Dispositivo)</h3>
+              <div style="overflow-x: auto; border: 1px solid var(--color-rose-border); border-radius: 14px;">
+                <table class="admin-table">
+                  <thead>
+                    <tr>
+                      <th>Plataforma</th>
+                      <th>Precio Actual ($ MXN)</th>
+                      <th>Calidad</th>
+                      <th>Disponibilidad</th>
+                      <th>Acción</th>
+                    </tr>
+                  </thead>
+                  <tbody id="adminProfilesTableBody"></tbody>
+                </table>
+              </div>
+            </div>
+
+            <div>
+              <h3 style="font-size: 1.1rem; color: var(--color-rose-deep); margin-bottom: 10px;">🏠 Cuentas Completas (Hogar)</h3>
+              <div style="overflow-x: auto; border: 1px solid var(--color-rose-border); border-radius: 14px;">
+                <table class="admin-table">
+                  <thead>
+                    <tr>
+                      <th>Plataforma</th>
+                      <th>Precio Actual ($ MXN)</th>
+                      <th>Calidad</th>
+                      <th>Disponibilidad</th>
+                      <th>Acción</th>
+                    </tr>
+                  </thead>
+                  <tbody id="adminFullAccountsTableBody"></tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- VIEW 3: COMBOS & PROMOTIONS -->
+        <div id="adminViewCombos" style="display: none;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px;">
+            <div style="font-weight: 700; font-size: 1.1rem; color: var(--color-text-title);">Combos & Promociones Especiales</div>
+            <button id="adminCreateComboBtn" class="btn-secondary" style="font-size: 0.85rem; padding: 8px 16px;">+ Crear Combo</button>
+          </div>
+          <div style="overflow-x: auto; border: 1px solid var(--color-rose-border); border-radius: 16px;">
+            <table class="admin-table">
+              <thead>
+                <tr>
+                  <th>Nombre del Combo</th>
+                  <th>Precio Combo</th>
+                  <th>Precio Normal</th>
+                  <th>Plataformas</th>
+                  <th>Acciones</th>
+                </tr>
+              </thead>
+              <tbody id="adminCombosTableBody"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- VIEW 4: ORDERS HISTORY -->
+        <div id="adminViewOrders" style="display: none;">
+          <div style="font-weight: 700; font-size: 1.1rem; color: var(--color-text-title); margin-bottom: 14px;">Pedidos Registrados</div>
+          <div style="overflow-x: auto; border: 1px solid var(--color-rose-border); border-radius: 16px;">
+            <table class="admin-table">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Cliente</th>
+                  <th>WhatsApp</th>
+                  <th>Servicio / Modalidad</th>
+                  <th>Precio</th>
+                  <th>Fecha</th>
+                  <th>Estado</th>
+                </tr>
+              </thead>
+              <tbody id="adminOrdersTableBody"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MODAL: ASIGNAR / EDITAR CUENTA DE CLIENTE (ADMIN) -->
+    <div id="adminAccountEditModal" class="modal-backdrop">
+      <div class="modal-card" style="width: 680px; max-width: 95vw; padding: 28px;">
+        <button id="closeAdminAccountEditModalBtn" style="position: absolute; top: 18px; right: 20px; background: transparent; border: none; font-size: 1.5rem; color: var(--color-text-muted); cursor: pointer;">✕</button>
+        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 18px; border-bottom: 1px solid var(--color-rose-border); padding-bottom: 12px;">
+          <span style="font-size: 1.4rem;">🔑</span>
+          <h2 id="adminAccountModalTitle" style="font-size: 1.4rem; color: var(--color-text-title); margin: 0;">Asignar Nueva Cuenta a Cliente</h2>
+        </div>
+
+        <form id="adminAccountForm" style="display: flex; flex-direction: column; gap: 14px;">
+          <input type="hidden" id="editAccountId" value="" />
+
+          <!-- Row 1: Client Selection or Input -->
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+            <div class="form-group" style="margin: 0;">
+              <label class="form-label">Cliente (Usuario o Nombre)</label>
+              <input type="text" id="accountClientName" class="form-input" placeholder="ej. Mariana López" required />
+            </div>
+            <div class="form-group" style="margin: 0;">
+              <label class="form-label">Usuario del Sistema (@)</label>
+              <input type="text" id="accountClientUsername" class="form-input" placeholder="ej. mariana.lopez" required />
+            </div>
+          </div>
+
+          <!-- Row 2: WhatsApp & Platform Name -->
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+            <div class="form-group" style="margin: 0;">
+              <label class="form-label">Teléfono / WhatsApp</label>
+              <input type="tel" id="accountClientPhone" class="form-input" placeholder="+52 983..." required />
+            </div>
+            <div class="form-group" style="margin: 0;">
+              <label class="form-label">Plataforma / Servicio</label>
+              <select id="accountPlatformSelect" class="form-input" style="background: #ffffff; cursor: pointer;">
+                <option value="Netflix Premium (Perfil 1 Privado 4K)">Netflix Premium (Perfil 1 Privado 4K)</option>
+                <option value="Disney+ & ESPN (Perfil 1 Dispositivo)">Disney+ & ESPN (Perfil 1 Dispositivo)</option>
+                <option value="Disney+ & ESPN (Cuenta Completa)">Disney+ & ESPN (Cuenta Completa)</option>
+                <option value="HBO Max (Perfil 1 Dispositivo)">HBO Max (Perfil 1 Dispositivo)</option>
+                <option value="HBO Max (Cuenta Completa Hogar)">HBO Max (Cuenta Completa Hogar)</option>
+                <option value="ViX Premium (Perfil 1 Dispositivo)">ViX Premium (Perfil 1 Dispositivo)</option>
+                <option value="ViX Premium (Cuenta Completa)">ViX Premium (Cuenta Completa)</option>
+                <option value="Crunchyroll Mega Fan (Perfil 1 Dispositivo)">Crunchyroll Mega Fan (Perfil 1 Dispositivo)</option>
+                <option value="Crunchyroll Mega Fan (Cuenta Completa)">Crunchyroll Mega Fan (Cuenta Completa)</option>
+                <option value="Paramount+ (Perfil 1 Dispositivo)">Paramount+ (Perfil 1 Dispositivo)</option>
+                <option value="Paramount+ (Cuenta Completa)">Paramount+ (Cuenta Completa)</option>
+                <option value="Amazon Prime Video (Perfil 1 Dispositivo)">Amazon Prime Video (Perfil 1 Dispositivo)</option>
+                <option value="Amazon Prime Video (Cuenta Completa)">Amazon Prime Video (Cuenta Completa)</option>
+                <option value="Universal+ (Perfil 1 Dispositivo)">Universal+ (Perfil 1 Dispositivo)</option>
+                <option value="Apple TV+ (Perfil 1 Dispositivo)">Apple TV+ (Perfil 1 Dispositivo)</option>
+                <option value="Apple TV+ (Cuenta Completa)">Apple TV+ (Cuenta Completa)</option>
+                <option value="Spotify Premium (Perfil Individual)">Spotify Premium (Perfil Individual)</option>
+                <option value="Spotify Premium (Cuenta Completa)">Spotify Premium (Cuenta Completa)</option>
+                <option value="Fox One (Cuenta Completa)">Fox One (Cuenta Completa)</option>
+                <option value="custom">Otro servicio personalizado...</option>
+              </select>
+            </div>
+          </div>
+
+          <div id="customPlatformRow" style="display: none;" class="form-group">
+            <label class="form-label">Nombre Personalizado del Servicio</label>
+            <input type="text" id="accountCustomName" class="form-input" placeholder="Nombre de la cuenta o plataforma" />
+          </div>
+
+          <!-- Row 3: Account Email & Password / PIN -->
+          <div style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 12px;">
+            <div class="form-group" style="margin: 0;">
+              <label class="form-label">Correo Asignado a la Cuenta</label>
+              <input type="email" id="accountEmailInput" class="form-input" placeholder="correo.streaming@gmail.com" required />
+            </div>
+            <div class="form-group" style="margin: 0;">
+              <label class="form-label">Contraseña o PIN de Acceso</label>
+              <input type="text" id="accountPasswordInput" class="form-input" placeholder="PIN: 1234 o Clave" required />
+            </div>
+          </div>
+
+          <!-- Row 4: Dates & Price & Status -->
+          <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px;">
+            <div class="form-group" style="margin: 0;">
+              <label class="form-label">Fecha de Renovación</label>
+              <input type="date" id="accountRenewalDate" class="form-input" required />
+            </div>
+            <div class="form-group" style="margin: 0;">
+              <label class="form-label">Monto Mensual ($ MXN)</label>
+              <input type="number" id="accountPriceInput" class="form-input" placeholder="88" required />
+            </div>
+            <div class="form-group" style="margin: 0;">
+              <label class="form-label">Estado de Pago</label>
+              <select id="accountPaymentStatus" class="form-input" style="background: #ffffff; cursor: pointer;">
+                <option value="al_dia">🟢 Al día</option>
+                <option value="por_vencer">🟡 Por vencer</option>
+                <option value="vencido">🔴 Vencido</option>
+                <option value="pendiente">🟠 Pendiente</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Notes -->
+          <div class="form-group" style="margin: 0;">
+            <label class="form-label">Notas Adicionales (Perfil, PIN, etc.)</label>
+            <input type="text" id="accountNotesInput" class="form-input" placeholder="ej. Perfil 1 privado con PIN. Garantía 25 días." />
+          </div>
+
+          <div style="display: flex; justify-content: flex-end; gap: 10px; margin-top: 10px;">
+            <button type="button" id="cancelAccountEditBtn" class="btn-secondary" style="padding: 10px 18px;">Cancelar</button>
+            <button type="submit" class="btn-primary" style="padding: 10px 22px;">Guardar Cuenta</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- CLIENT PERSONAL SPACE MODAL (MIS CUENTAS & SUSCRIPCIONES) -->
+    <div id="clientPortalModal" class="modal-backdrop">
+      <div class="modal-card" style="width: 820px; max-width: 95vw; padding: 32px; max-height: 90vh; overflow-y: auto;">
+        <button id="closeClientPortalBtn" style="position: absolute; top: 20px; right: 24px; background: transparent; border: none; font-size: 1.6rem; color: var(--color-text-muted); cursor: pointer; padding: 4px;">✕</button>
+
+        <!-- Header -->
+        <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 22px; border-bottom: 1px solid var(--color-rose-border); padding-bottom: 18px;">
+          <div>
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <span style="font-size: 1.5rem;">✨</span>
+              <h2 style="font-size: 1.6rem; color: var(--color-text-title); margin: 0;">Mis Cuentas & Suscripciones</h2>
+            </div>
+            <div id="clientPortalWelcomeText" style="font-size: 0.92rem; color: var(--color-rose-deep); margin-top: 4px;">
+              Bienvenido(a) a tu espacio personal BRISA PREMIUM
+            </div>
+          </div>
+          <div id="clientPortalUserPill" style="background: var(--color-rose-subtle); border: 1px solid var(--color-rose-border); padding: 8px 16px; border-radius: 9999px; font-size: 0.84rem; font-weight: 700; color: var(--color-text-title);">
+            👤 Cliente Activo
+          </div>
+        </div>
+
+        <!-- Feedback & Info banner -->
+        <div style="background: #ffffff; border: 1px solid var(--color-rose-border); border-radius: 14px; padding: 14px 18px; margin-bottom: 20px; font-size: 0.88rem; color: var(--color-text-body); display: flex; align-items: center; gap: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.02);">
+          <span style="font-size: 1.3rem;">🛡️</span>
+          <div>
+            <strong>Garantía Oficial de 25 Días:</strong> Tus accesos están protegidos y cuentan con soporte directo. Si la cuenta llega a fallar, te brindamos reposición de correo en un lapso de 1 a 3 días hábiles.
+          </div>
+        </div>
+
+        <!-- Dynamic Container for Client's Assigned Accounts -->
+        <div id="clientPortalCardsContainer" style="display: flex; flex-direction: column; gap: 16px;">
+          <div style="text-align: center; padding: 30px; color: var(--color-text-muted);">
+            Cargando tus suscripciones activas...
+          </div>
+        </div>
+
+        <!-- Footer / Contact section inside Client Space -->
+        <div style="margin-top: 26px; padding: 16px 20px; background: var(--color-rose-subtle); border: 1px dashed var(--color-rose-border); border-radius: 16px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 14px;">
+          <div>
+            <div style="font-weight: 700; font-size: 0.92rem; color: var(--color-text-title);">¿Dudas con tu renovación o acceso?</div>
+            <div style="font-size: 0.82rem; color: var(--color-text-muted);">Atención personalizada de lunes a domingo por WhatsApp (+52 983 182 6892).</div>
+          </div>
+          <a href="https://wa.me/529831826892?text=%C2%A1Hola%20Brisa%20Premium!%20%E2%9C%A8%20Vengo%20de%20mi%20espacio%20personal%20de%20cliente%20y%20deseo%20consultar%20mi%20servicio." target="_blank" rel="noopener noreferrer" class="btn-whatsapp" style="padding: 10px 18px; font-size: 0.88rem;">
+            WhatsApp Soporte
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- PLATFORM DETAIL MODAL -->
+    <div id="productDetailModal" class="modal-backdrop">
+      <div id="productDetailContent" class="modal-card" style="width: 660px; max-width: 95vw; padding: 28px;"></div>
+    </div>
+
+    <script type="module" src="/src/index.ts"></script>
+  </body>
+</html>
